@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Text?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.canvas.Canvas?>
+<?import main.java.util.MapCanvas?>
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" xmlns="https://javafx.com/javafx/21"
+            fx:controller="main.java.ui.controller.MainController">
+    <top>
+        <VBox>
+            <HBox spacing="10">
+                <padding>
+                    <Insets top="10" right="10" bottom="10" left="10"/>
+                </padding>
+                <Label fx:id="ticketsSoldLabel" text="Prodanih karata: 0"/>
+                <Label fx:id="totalRevenueLabel" text="Ukupna zarada: 0 BAM"/>
+            </HBox>
+
+            <HBox spacing="10">
+                <padding>
+                    <Insets top="10" right="10" bottom="10" left="10"/>
+                </padding>
+                <Label text="Od:"/>
+                <ComboBox fx:id="sourceCombo" prefWidth="400"/>
+                <Label text="Do:"/>
+                <ComboBox fx:id="destCombo" prefWidth="400"/>
+                <Label text="Kriterijum:"/>
+                <ComboBox fx:id="criteriaCombo" prefWidth="100"/>
+                <Button fx:id="findButton" text="Pronađi rutu"/>
+            </HBox>
+        </VBox>
+    </top>
+    <center>
+        <SplitPane dividerPositions="0.6">
+            <MapCanvas fx:id="mapCanvas" SplitPane.resizableWithParent="true"/>
+            <VBox spacing="5" SplitPane.resizableWithParent="true" VBox.vgrow="ALWAYS">
+                <TableView fx:id="routeTable" VBox.vgrow="ALWAYS">
+                    <columns>
+                        <TableColumn fx:id="typeCol" text="Vrsta" prefWidth="100"/>
+                        <TableColumn fx:id="fromCol" text="Od" prefWidth="100"/>
+                        <TableColumn fx:id="toCol" text="Do" prefWidth="100"/>
+                        <TableColumn fx:id="departCol" text="Vrijeme" prefWidth="100"/>
+                        <TableColumn fx:id="durCol" text="Trajanje" prefWidth="100"/>
+                        <TableColumn fx:id="priceCol" text="Cijena" prefWidth="100"/>
+                    </columns>
+                </TableView>
+            </VBox>
+        </SplitPane>
+    </center>
+    <bottom>
+        <HBox>
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+            <Text fx:id="statusText"/>
+
+            <Region HBox.hgrow="ALWAYS"/>
+            <Button fx:id="moreButton" alignment="BASELINE_RIGHT" text="Top 5 ruta" disable="true"/>
+            <Button fx:id="purchaseButton" text="Kupi kartu" onAction="#onPurchase" disable="true"/>
+        </HBox>
+    </bottom>
+</BorderPane>

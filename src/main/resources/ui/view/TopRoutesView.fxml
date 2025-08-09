@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.geometry.Insets?>
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="main.java.ui.controller.TopRoutesController">
+    <center>
+        <TableView fx:id="summaryTable">
+            <columns>
+                <TableColumn fx:id="rankCol" text="#" prefWidth="40"/>
+                <TableColumn fx:id="durationCol" text="Trajanje (min)" prefWidth="120"/>
+                <TableColumn fx:id="priceCol" text="Cijena" prefWidth="80"/>
+                <TableColumn fx:id="transfersCol" text="Transfera" prefWidth="80"/>
+                <TableColumn fx:id="actionCol" text="Kupi" prefWidth="80"/>
+            </columns>
+        </TableView>
+    </center>
+    <bottom>
+        <HBox alignment="CENTER_RIGHT" spacing="10">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+            <Button  text="Zatvori" onAction="#onClose"/>
+        </HBox>
+    </bottom>
+</BorderPane>

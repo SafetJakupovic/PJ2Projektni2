@@ -1,0 +1,18 @@
+--- Račun za kupovinu karte ---
+Datum: 2025-07-28
+Vrijeme izdavanja: 22:22
+
+Relacija: 
+ - Z_0_1 -> Z_1_1 (polazak 21:00, trajanje 1h 33m, 230 BAM)
+ - Z_1_1 -> Z_1_2 (polazak 10:45, trajanje 0h 50m, 160 BAM)
+ - Z_1_2 -> Z_2_2 (polazak 04:00, trajanje 2h 9m, 219 BAM)
+ - Z_2_2 -> A_2_2 (trajanje 5 min)
+ - A_2_2 -> A_2_3 (polazak 03:15, trajanje 1h 43m, 396 BAM)
+ - A_2_3 -> Z_2_3 (trajanje 5 min)
+ - Z_2_3 -> Z_3_3 (polazak 12:45, trajanje 2h 8m, 653 BAM)
+ - Z_3_3 -> Z_4_3 (polazak 22:00, trajanje 0h 50m, 107 BAM)
+ - Z_4_3 -> A_4_3 (trajanje 5 min)
+
+Ukupno vrijeme putovanja: 4435 minuta
+Ukupna cijena: 1765 BAM
+Broj presjedanja: 3
