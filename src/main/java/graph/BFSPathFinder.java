@@ -21,7 +21,7 @@ public class BFSPathFinder implements IPathFinder {
 
     /**
      * {@inheritDoc}
-     *
+     * <p>
      * Ova implementacija radi Breadth‑First pretragu po grafu
      * i mjeri broj promjena tipa prevoza (presjedanja).
      */
@@ -36,7 +36,7 @@ public class BFSPathFinder implements IPathFinder {
             NodeEntry prev; // prethodni čvor u putanji
             Departure departure; // Departure kojim smo stigli ovdje
             int transfers;  // broj presedanja dosad
-            int arrivalMinute; // apsolutno vreme dolaska u minutama
+            int arrivalMinute; // apsolutno vrijeme dolaska u minutama
 
             NodeEntry(GraphNode node, NodeEntry prev, Departure departure, int transfers, int arrivalMinute) {
                 this.node = node;
